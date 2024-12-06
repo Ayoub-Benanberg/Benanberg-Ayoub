@@ -50,7 +50,7 @@ export default function AllProjects() {
                         <button>
                             <img
                                 src={`${dark === false ? "imgs/icons/sun.png" : "imgs/icons/night.png"}`}
-                                className="border border-gray-500 rounded-md p-1.5 m-2 w-10"
+                                className="border border-gray-500 rounded-md p-1.5 m-2 w-9"
                                 alt="mode"
                                 onClick={() => setDark(!dark)}
                             />
