@@ -9,11 +9,12 @@ export default function Projects({ data, isFr, dark }) {
     const [loading, setLoading] = useState(true);
     const [dots, setDots] = useState(".");
 
-    // Simulate data fetching/loading
+    // Set loading to false once data is available
     useEffect(() => {
-        const timer = setTimeout(() => setLoading(false), 2000); // Simulate a 2s delay
-        return () => clearTimeout(timer);
-    }, []);
+        if (data && data.length > 0) {
+            setLoading(false);
+        }
+    }, [data]); // Dependency on data to handle when it changes
 
     // Animation for typing dots
     useEffect(() => {
